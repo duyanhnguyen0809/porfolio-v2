@@ -154,12 +154,13 @@ const About = () => {
                 <TabsContent value="personal">
                   <div className="text-center xl:text-left">
                     <h3 className="h3 mb-4">
-                      Unmatched Service Quality and Customer Satisfaction
+                      Unmatched Service Quality and My Commitment to Customer
+                      Satisfaction
                     </h3>
                     <p className="subtitle max-w-xl mx-auto xl:mx-0">
-                      UN PROGRAMMEUR MOTIVÉ QUI RÉUSSIT À TRANSFORMER DES IDÉES
-                      EN RÉALITÉ GRÂCE À L'ART DU CODAGE. ENSEMBLE, EXPLORONS LE
-                      POTENTIEL ILLIMITÉ DE LA TECHNOLOGIE ET DE L'INNOVATION.
+                      A MOTIVATED PROGRAMMER WHO SUCCEEDS IN TURNING IDEAS INTO
+                      REALITY THROUGH THE ART OF CODING. TOGETHER, LET'S EXPLORE
+                      THE LIMITLESS POTENTIAL OF TECHNOLOGY AND INNOVATION.
                     </p>
                     <div className="grid xl:grid-cols-2 gap-4 mb-12">
                       {infoData.map((item, index) => {
