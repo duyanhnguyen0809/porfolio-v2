@@ -3,7 +3,7 @@ import Image from "next/image";
 import { Card, CardHeader } from "./ui/card";
 import { Github, Link2Icon } from "lucide-react";
 import { Badge } from "./ui/badge";
-import { useState } from 'react';
+import { useState } from "react";
 
 const ProjectCard = ({ project }) => {
   const [showMore, setShowMore] = useState(false);
@@ -11,6 +11,7 @@ const ProjectCard = ({ project }) => {
   const handleShowMore = () => {
     setShowMore(!showMore);
   };
+
   return (
     <Card className="group overflow-hidden relative">
       <CardHeader className="p-0">
@@ -46,14 +47,14 @@ const ProjectCard = ({ project }) => {
           {project.category}
         </Badge>
         <h4 className="h4 mb-1">{project.name}</h4>
-        <p className="text-muted-foreground text-lg">
+        <p
+          className="text-muted-foreground text-lg cursor-pointer"
+          onClick={handleShowMore}
+        >
           {showMore
             ? project.description
             : `${project.description.substring(0, 50)}...`}
         </p>
-        <button onClick={handleShowMore}>
-          {showMore ? "Show Less" : "Show More"}
-        </button>
       </div>
     </Card>
   );
