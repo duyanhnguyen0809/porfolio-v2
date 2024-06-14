@@ -3,8 +3,14 @@ import Image from "next/image";
 import { Card, CardHeader } from "./ui/card";
 import { Github, Link2Icon } from "lucide-react";
 import { Badge } from "./ui/badge";
+import { useState } from 'react';
 
 const ProjectCard = ({ project }) => {
+  const [showMore, setShowMore] = useState(false);
+
+  const handleShowMore = () => {
+    setShowMore(!showMore);
+  };
   return (
     <Card className="group overflow-hidden relative">
       <CardHeader className="p-0">
@@ -20,12 +26,14 @@ const ProjectCard = ({ project }) => {
           <div className="flex gap-x-4">
             <Link
               href={project.link}
+              target="_blank"
               className="bg-secondary w-[53px] h-[54px] rounded-full flex justify-center items-center scale-0 opacity-0 group-hover:scale-100 group-hover:opacity-100 transition-all duration-200"
             >
               <Link2Icon className="text-white" />
             </Link>
             <Link
               href={project.github}
+              target="_blank"
               className="bg-secondary w-[53px] h-[54px] rounded-full flex justify-center items-center scale-0 opacity-0 group-hover:scale-100 group-hover:opacity-100 transition-all duration-300"
             >
               <Github className="text-white" />
@@ -38,7 +46,14 @@ const ProjectCard = ({ project }) => {
           {project.category}
         </Badge>
         <h4 className="h4 mb-1">{project.name}</h4>
-        <p className="text-muted-foreground text-lg">{project.description}</p>
+        <p className="text-muted-foreground text-lg">
+          {showMore
+            ? project.description
+            : `${project.description.substring(0, 50)}...`}
+        </p>
+        <button onClick={handleShowMore}>
+          {showMore ? "Show Less" : "Show More"}
+        </button>
       </div>
     </Card>
   );
