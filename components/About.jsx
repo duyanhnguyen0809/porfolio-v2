@@ -42,14 +42,9 @@ const qualificationData = [
     title: "education",
     data: [
       {
-        university: "University Toulouse 2 Jean Jaurès",
-        qualification: "Bachelor of Computer Science and Mathematics",
-        years: "2020 - 2024",
-      },
-      {
-        university: "University Toulouse 2 Jean Jaurès",
-        qualification: "Bachelor of Computer Science and Mathematics",
-        years: "2020 - 2024",
+        university: "ESGI Paris",
+        qualification: "Master of Web Engineering",
+        years: "2024 - 2026",
       },
       {
         university: "University Toulouse 2 Jean Jaurès",
@@ -62,14 +57,9 @@ const qualificationData = [
     title: "experience",
     data: [
       {
-        company: "Henritrip",
-        role: "Frontend Developer",
-        years: "4/2023 - 7/2023",
-      },
-      {
-        company: "Henritrip",
-        role: "Frontend Developer",
-        years: "4/2023 - 7/2023",
+        company: "Saigon Market",
+        role: "Project Manager",
+        years: "5/2024 - 8/2024",
       },
       {
         company: "Henritrip",
